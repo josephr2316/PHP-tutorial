@@ -1,7 +1,11 @@
-<!--//  Dynamically Typed can change after it's been defined, happens at run time -->
-<!--//  Static Typed, happens at compile time-->
-
 <?php
+declare(strict_types=1);
+
+//  Dynamically Typed can change after it's been defined, happens at run time
+//  Static Typed, happens at compile time
+
+//Strict type mode
+
 /* Data Types & Type Casting */
 
 #   4   Scalar Types
@@ -70,3 +74,21 @@ $sum = sum2(2,3);
 echo $sum;
 echo '<br/>';
 var_dump($sum);
+
+
+
+function sum3(int $x, int $y){
+     return $x + $y;
+}
+
+function sum4(float $x, float $y){
+    return $x + $y;
+}
+//$sum = sum3('2',3);
+echo $sum . '<br/>';
+
+$sum = sum4(3.5,2.5);
+echo $sum . '<br/>';
+
+$sum = sum4(3,2);
+echo $sum . '<br/>';
