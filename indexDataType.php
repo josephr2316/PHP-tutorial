@@ -92,3 +92,8 @@ echo $sum . '<br/>';
 
 $sum = sum4(3,2);
 echo $sum . '<br/>';
+
+
+# Casting a variable
+
+$x = (int) '5';
