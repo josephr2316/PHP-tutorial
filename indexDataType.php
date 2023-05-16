@@ -31,6 +31,10 @@
 
 #  4    Compound Types
         #   array
+        $companies = [1, 2, 3, 0.5, -9.2, 'A', 'b', true];
+        echo $companies; // It will print the array name with some warnings
+        print $companies;   // It will print the array name with some warnings
+        print_r($companies);
         #   object
         #   callable
         #   iterable
@@ -38,3 +42,31 @@
 #  2    Special Types
         #   resource
         #   null
+
+//function sum(int $x, int $y) // type juggling or type coercion
+
+// It's going to throw an error, if it can't make the conversion as expecting an array and receive an int
+//function sum(array $x, int $y)
+function sum($x, $y){
+    var_dump($x, $y);
+    echo '<br/>';
+    return $x + $y;
+}
+
+function sum2($x, $y){
+    $x = 5.5;
+    var_dump($x, $y);
+    echo '<br/>';
+    return $x + $y;
+}
+
+
+echo sum(2,3) . '<br/>';
+echo sum(2,'3') . '<br/>'; // It makes the conversion
+$sum = sum(2,'3');
+var_dump($sum);
+echo '<br/>';
+$sum = sum2(2,3);
+echo $sum;
+echo '<br/>';
+var_dump($sum);
