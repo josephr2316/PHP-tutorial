@@ -19,6 +19,16 @@
         echo $price . '<br/>';
         echo $greeting . '<br/>';
 
+        echo gettype($completed);
+        echo gettype($score);
+        echo gettype($price); // Float will be double
+        echo gettype($greeting);
+
+        var_dump($completed);
+        var_dump($score);
+        var_dump($price);
+        var_dump($greeting);
+
 #  4    Compound Types
         #   array
         #   object
